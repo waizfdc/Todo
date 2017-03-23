@@ -72,7 +72,7 @@ function isDeleteBtn(target) {
 function changeTodoStatus(element) {
     var isTodo = element.classList.contains('task_todo');
     setTodoStatusClassName(element, !isTodo);
-    if(filteringNow === 'todo') {
+    if(filteringNow !== 'all') {
         element.style.display = 'none';
     }
 }
