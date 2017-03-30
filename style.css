@@ -115,10 +115,10 @@ body {
     border-bottom: 1px solid #ededed;
     cursor: pointer;
     position: relative;
+    /*border: 1px solid red;*/
 }
 
 .task_done {
-    text-decoration: line-through;
     color: lightgray;
 }
 
@@ -135,11 +135,22 @@ body {
     color: lightgrey;
 }
 
+.task__dates {
+    display: block;
+    font-size: 10px;
+    position: absolute;
+    top: 20%;
+}
+
 .task__name {
     display: block;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    width: 80%;
+    position: relative;
+    left: 20%;
+    /*border: 1px solid red;*/
 }
 
 .task__input {
@@ -160,6 +171,10 @@ body {
 
 .task_done .task__status::after {
     content: "\2713"; /*✓ CHECK MARK*/
+}
+
+.task_done .task__name {
+    text-decoration: line-through;
 }
 
 .task__delete-button {
